@@ -1,0 +1,68 @@
+#mainWindow {
+    background: #ECF0F1;
+}
+
+#mainBox {
+    padding: 15px;
+}
+
+/* Главная сетка */
+#mainGrid {
+    border: 2px solid #999;
+}
+
+/* Каждый второй квадрат 3x3 */
+#mainGrid > grid:nth-child(2n+1) {
+    background: #E1E5E5;
+}
+
+/* Цифры на главной сетке */
+#mainGrid box label {
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 18px;
+}
+
+/* Клетки на главной сетке */
+#mainGrid button {
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+}
+
+/* Наведение курсора на клетку на главной сетке */
+#mainGrid button:hover {
+    background: #3498DB;
+}
+
+/* Активация клетки на главной сетке */
+#mainGrid button:focus {
+    background: #E74C3C;
+}
+
+#mainGrid button.correct {
+    animation: correct 0.75s ease-out;
+}
+
+#mainGrid button.incorrect {
+    animation: incorrect 0.75s ease-out;
+}
+
+#inputPopover grid button {
+    min-width: 20px;
+    min-height: 20px;
+}
+
+#statusBar {
+    padding-top: 15px;
+}
+
+@keyframes correct {
+    0%   {background-color: #6AE765;}
+    100% {background-color: transparent;}
+}
+
+@keyframes incorrect {
+    0%   {background-color: #E74C3C;}
+    100% {background-color: transparent;}
+}
